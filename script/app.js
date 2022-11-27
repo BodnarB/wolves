@@ -4,6 +4,7 @@ const galleryImgs = document.querySelectorAll('.gallery-img')
 const lightboxContainer = document.querySelector('.lightbox-img-container')
 const lightboxImg = document.querySelector('.lightbox-image')
 const blurBg = document.querySelector('.blur-bg')
+const imgBoxes = document.querySelectorAll('.img-box')
 
 function headerPosition() {
     navbar.style.top = `${header.offsetHeight}px`
@@ -36,3 +37,7 @@ function hideLightboxImg() {
 }
 
 lightboxContainer.addEventListener('click', hideLightboxImg)
+
+imgBoxes.forEach(imgBox => {
+    imgBox.style.height = `${imgBox.offsetWidth}px`
+})
