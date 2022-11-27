@@ -41,3 +41,12 @@ lightboxContainer.addEventListener('click', hideLightboxImg)
 imgBoxes.forEach(imgBox => {
     imgBox.style.height = `${imgBox.offsetWidth}px`
 })
+
+function imgBoxResize(){
+    imgBoxes.forEach(imgBox => {
+        imgBox.style.height = `${imgBox.offsetWidth}px`
+    })
+    
+}
+
+window.addEventListener('resize', imgBoxResize)
