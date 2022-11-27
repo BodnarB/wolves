@@ -1,0 +1,136 @@
+:root {
+    --main-rose: #FFC4C4;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../font/Montserrat-VariableFont_wght.ttf);
+}
+
+html {
+    font-family: Montserrat;
+    user-select: none;
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    min-width: 290px;
+}
+
+header {
+    min-width: 290px;
+    background-color: black;
+    color: whitesmoke;
+    padding: 0.5rem 1rem;
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+}
+
+.max-width-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 0.5rem;
+}
+
+.title {
+    text-align: center;
+}
+
+h2 {
+    color: var(--main-rose);
+}
+
+.logo {
+    max-width: 42px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.navbar {
+    color: whitesmoke;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    background-color: #0e0e0eef;
+    transition-duration: 0.3s;
+}
+
+.hamburger-lines,
+.hamburger-lines::before,
+.hamburger-lines::after {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    z-index: 9;
+    background-color: whitesmoke;
+    transition-duration: 0.2s;
+}
+
+.hamburger-lines::before {
+    content: '';
+    top: -8px;
+}
+
+.hamburger-lines::after {
+    content: '';
+    top: 8px;
+}
+
+.hamburger-button {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.hamburger-button:hover .hamburger-lines,
+.hamburger-button:hover .hamburger-lines::before,
+.hamburger-button:hover .hamburger-lines::after {
+    background-color: var(--main-rose);
+}
+
+#menu-toggle:checked~.hamburger-button .hamburger-lines {
+    transform: rotate(45deg);
+}
+
+#menu-toggle:checked~.hamburger-button .hamburger-lines::before {
+    transform: rotate(-90deg);
+    top: 0;
+}
+
+#menu-toggle:checked~.hamburger-button .hamburger-lines::after {
+    opacity: 0;
+}
+
+#menu-toggle:checked~.navbar {
+    visibility: visible;
+    opacity: 1;
+    transition-duration: 0.3s;
+}
+
+.menu-btn {
+    display: block;
+    padding: 0.6rem;
+    transition-duration: 0.25s;
+}
+
+.menu-btn:hover {
+    background-color: black;
+    transition-duration: 0.25s;
+}
