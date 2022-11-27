@@ -1,5 +1,6 @@
 :root {
-    --main-rose: #FFC4C4;
+    --main-rose: #c6a989;
+    --main-gray: #141414;
 }
 
 @font-face {
@@ -8,11 +9,10 @@
 }
 
 html {
-    font-family: Montserrat;
+    font-family: Montserrat, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     user-select: none;
     scroll-behavior: smooth;
     font-size: 16px;
-
 }
 
 body {
@@ -20,7 +20,7 @@ body {
 }
 
 header {
-    background-color: rgb(20, 20, 20);
+    background-color: #141414;
     color: whitesmoke;
     padding: 0.5rem 1rem;
     z-index: 3;
@@ -144,7 +144,7 @@ h2 {
 
 .gallery-img {
     display: block;
-    border-radius: 0.3rem;
+    /* border-radius: 0.3rem; */
     padding: 0.1rem;
     object-fit: cover;
     width: 100%;
@@ -154,7 +154,7 @@ h2 {
 .img-box {
     flex-shrink: 0;
     flex-grow: 0;
-    flex-basis: 50%;
+    flex-basis: 33%;
 }
 
 .gallery {
@@ -206,4 +206,18 @@ h2 {
     transform: translate(-50%, -50%);
     border-radius: 0.3rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+footer {
+    background-color: var(--main-gray);
+    color: whitesmoke;
+    text-align: center;
+    padding: 1rem 0.5rem;
+}
+
+.social-footer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.7rem;
 }
