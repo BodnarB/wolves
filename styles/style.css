@@ -186,6 +186,7 @@ h2 {
 
 .blur-bg-active {
     backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     position: absolute;
     height: 100%;
     width: 100%;
